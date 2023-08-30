@@ -8,21 +8,18 @@ export const metadata = {
   description: " created by zubair",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
         <ToastContainer />
         {/* now all user info is present thorugh out the appliacation */}
         <UserProvider>
-          <CartProvider>
-
-          {children}
-          </CartProvider>
-          
-          </UserProvider> 
+          <CartProvider>{children}</CartProvider>
+        </UserProvider>
       </body>
     </html>
   );
 }
-
